@@ -26,8 +26,12 @@ html{
     font-size: 10px;
 }
 h1{
-    font-family: 'HomemadeApple-Regular','sans-serif';
+    font-family: 'HomemadeApple-Regular';
     font-size: 3rem;
+}
+h2{
+    font-family: 'HomemadeApple-Regular';
+    font-size: 2rem;
 }
 .content{
     width: 100%;
