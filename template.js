@@ -1,5 +1,5 @@
-function getNotesTemplate(post){
+function getNotesTemplate(indexNote){
     return `
-            <p>${post}</p>
+            <p>${notes[indexNote]}</p><button onclick="deleteSingleNote(${indexNote})">Delete</button>
         `
 }
