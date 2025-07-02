@@ -7,15 +7,20 @@
     <link rel="stylesheet" href="style/standard.css">
     <link rel="stylesheet" href="style.css">
 </head>
-<body onload="renderNotes()">
+<body>
     <header>
 
     </header>
     <main>
         <h1>Notebook</h1>
-        <section>
-            <div id="content">
-                <p></p>
+        <section id="show-all-posts">
+            <div id="display-all" class="content">
+            </div>
+        </section>
+        <section id="add-new-post">
+            <div class="content">
+                <input id="input-note" type="text">
+                <button onclick="addSingleNote()">Save</button>
             </div>
         </section>
     </main>
@@ -23,5 +28,6 @@
         © 2025, Felicia Tretter.
     </footer>
     <script src="script.js"></script>
+    <script src="template.js"></script>
 </body>
 </html>
