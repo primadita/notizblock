@@ -25,6 +25,21 @@
 html{
     font-size: 10px;
 }
+header{
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+body{
+    margin: 30px;
+    font-family: 'PatrickHand-Regular';
+    font-size: 1.6rem;
+}
+section{
+    background: gray;
+    margin: 8px;
+    height: 200px;
+}
 h1{
     font-family: 'HomemadeApple-Regular';
     font-size: 3rem;
@@ -35,4 +50,6 @@ h2{
 }
 .content{
     width: 100%;
+    background: transparent;
+    padding: 20px;
 }

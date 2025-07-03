@@ -3,31 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notizblock</title>
+    <title>Notebook</title>
     <link rel="stylesheet" href="style/standard.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body onload="renderNotes()">
     <header>
-
+        <h1>Notebook</h1>
     </header>
     <main>
-        <h1>Notebook</h1>
         <section id="add-new-post">
+            <h2>Write a note</h2>
             <div class="content">
-                <input id="input-note" type="text">
-                <button onclick="addSingleNote()">Save</button>
+                    <label for="input-title">Titel :</label><br>
+                    <input id="input-title" type="text"><br>
+                    <label for="input-desc">Notes : </label><br>
+                    <input id="input-desc" type="text">
+                    <button onclick="addSingleNote()">Save</button>
             </div>
         </section>
         <section id="show-all-posts">
-            <h2>All posts</h2>
-            <div id="display-all" class="content">
+            <h2>All notes</h2>
+            <div id="all-notes" class="content">
+
             </div>
         </section>
+        <section id="archive">
+            <h2>Archiv</h2>
+            <div id="archiv-notes" class="content">
+            </div>
         </section>
-            <h2>Trash</h2>
+        <section>
+            <h2>Deleted notes</h2>
             <div id="trash" class="content">
-                
             </div>
         </section>
     </main>
