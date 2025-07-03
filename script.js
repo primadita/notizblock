@@ -3,8 +3,6 @@ let archives = [];
 let trashbin =[];
 
 
-
-// ich muss definieren wo sie anzuzeigen sind
 function init(){
     getFromLocalStorage();
     renderAll();
@@ -14,40 +12,30 @@ function renderAll(){
     renderNotes();
     renderArchives();
     renderTrashNotes();
-    // saveToLocalStorage();
 }
+
 function getFromLocalStorage(){
     let notesArr = JSON.parse(localStorage.getItem("notes"));
-    
         if (notesArr !== null){
             notes = notesArr;
         }
-    // notes = notesArr;
+
     let archiveArr = JSON.parse(localStorage.getItem("archives"));
-    // archives = archiveArr;
         if (archiveArr !== null){
             archives = archiveArr;
         }
 
     let trsArr = JSON.parse(localStorage.getItem("archives"));
-    // archives = archiveArr;
         if (trsArr !== null){
             archives = trsArr;
         }
 }
-
-// function saveToLocalStorage(){
-//     localStorage.setItem("notes", JSON.stringify(notes));
-//     localStorage.setItem("archives", JSON.stringify(archives));
-    
-// }
 
 function renderNotes(){
     const contentRef = document.getElementById('all-notes');
     contentRef.innerHTML = "";
     
     for (let indexNote = 0; indexNote < notes.length; indexNote++){
-        // const singleNote = notes[indexNote];
         contentRef.innerHTML += getNotesTemplate(indexNote);
     }
     localStorage.setItem("notes", JSON.stringify(notes));  
@@ -58,17 +46,16 @@ function renderArchives(){
     archiveRef.innerHTML = "";
     
     for (let indexArchive = 0; indexArchive < archives.length; indexArchive++){
-        // const singleArchive = archives[indexArchive];
         archiveRef.innerHTML += getArchiveTemplate(indexArchive);
     }
     localStorage.setItem("archives", JSON.stringify(archives));
 }
+
 function renderTrashNotes(){
     let trashbinRef = document.getElementById('trash');
     trashbinRef.innerHTML ="";
 
     for (let indexTrashbin = 0; indexTrashbin < trashbin.length; indexTrashbin++){
-        // let singleTrash = trashbin[indexTrashbin];
         trashbinRef.innerHTML += getTrashbinTemplate(indexTrashbin);
     }; 
     localStorage.setItem("trashbin", JSON.stringify(trashbin));
@@ -90,7 +77,6 @@ function addSingleNote(){
 
     localStorage.setItem("notes", JSON.stringify(notes));
 }
-
 
 function deleteNote(originarray, index){
     let gotoTrash = originarray;
@@ -115,7 +101,6 @@ function sendToNote(originarray, index){
     
     renderAll();
 }
-
 
 function deleteIrrevocably(indexTrashbin){
     trashbin.splice(indexTrashbin,1);
