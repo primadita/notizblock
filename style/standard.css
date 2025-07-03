@@ -38,7 +38,8 @@ body{
 section{
     background: gray;
     margin: 8px;
-    height: 200px;
+    height: auto;
+    min-height: 200px;
 }
 h1{
     font-family: 'HomemadeApple-Regular';

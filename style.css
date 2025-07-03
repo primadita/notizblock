@@ -36,6 +36,9 @@ button{
 }
 #postit{
     background: rgb(182, 174, 163);
-    width: 100px;
-    height: 150px;
+    color: black;
+    font-size: 1.6rem;
+    width: 15%;
+    height: 90%;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
