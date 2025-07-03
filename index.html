@@ -7,18 +7,18 @@
     <link rel="stylesheet" href="style/standard.css">
     <link rel="stylesheet" href="style.css">
 </head>
-<body onload="renderNotes()">
+<body onload="init()">
     <header>
         <h1>Notebook</h1>
     </header>
     <main>
         <section id="add-new-post">
             <h2>Write a note</h2>
-            <div class="content">
+            <div class="box">
                     <label for="input-title">Title :</label><br>
-                    <input id="input-title" type="text" placeholder="write your title" ><br>
+                    <input id="input-title" type="text" placeholder="write your title" required><br>
                     <label for="input-desc">Notes : </label><br>
-                    <input id="input-desc" type="text" placeholder="write your notes">
+                    <input id="input-desc" type="text" placeholder="write your notes" required>
                     <button onclick="addSingleNote()">Save</button>
             </div>
         </section>
